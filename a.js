@@ -1,8 +1,5 @@
 (async function(){
       try{
-        // disable button while running
-        this.disabled=true; this.textContent='Loading...';
-
         // 1) Ensure sql.js script is available: if not, inject it into the page.
         if(!window.initSqlJs){
           await new Promise((resolve,reject)=>{
@@ -38,9 +35,5 @@
       }catch(err){
         console.error(err);
         alert('Error: '+err);
-      }finally{
-        // re-enable button and restore label
-        this.disabled=false;
-        this.textContent='Load & log comments';
       }
     }).call(this)
