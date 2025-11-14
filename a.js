@@ -16,8 +16,8 @@
           locateFile: filename => 'https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/'+filename
         });
 
-        // 3) Fetch the database file from the same server (data.db must be in same folder).
-        const resp = await fetch('data.db');
+        // 3) Fetch the database file from the same server
+        const resp = await fetch('../data.db');
         if(!resp.ok) throw new Error('Failed to fetch data.db: '+resp.status);
         const ab = await resp.arrayBuffer();
 
