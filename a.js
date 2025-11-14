@@ -17,7 +17,7 @@
         });
 
         // 3) Fetch the database file from the same server
-        const resp = await fetch('../data.db');
+        const resp = await fetch('../../data.db');
         if(!resp.ok) throw new Error('Failed to fetch data.db: '+resp.status);
         const ab = await resp.arrayBuffer();
 
